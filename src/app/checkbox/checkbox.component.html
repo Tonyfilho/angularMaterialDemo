@@ -1,0 +1,12 @@
+<section class="example-section" >
+  <div *ngIf="localStyle.checked">
+    <p class="localStyle">Nosso CheckBox</p>
+  </div>
+  <p *ngIf="!localStyle.checked">Nosso CheckBox</p>
+  <mat-checkbox class="example-margin" #localStyle
+  [value]="1"
+  [checked]="isChecked"
+  (change)="OnChange($event)"
+  color="warn">Subscribe to List!</mat-checkbox>
+</section>
+
