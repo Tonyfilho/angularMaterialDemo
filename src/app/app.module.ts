@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import { DialogModule } from './dialog/dialog.module'; //module
 import { AppComponent } from './app.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioButtonsComponent } from './radio-buttons/radio-buttons.component';
@@ -13,6 +14,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ChipColorsComponent } from './chip-colors/chip-colors.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule, } from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -28,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,11 +40,13 @@ import {MatCardModule} from '@angular/material/card';
     DatePickerComponent,
     ChipColorsComponent,
     ProgressSpinnerComponent,
+
   ],
   imports: [
 
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,DialogModule,
+
     BrowserAnimationsModule,
     FormsModule,
     MatRadioModule,
@@ -54,9 +59,10 @@ import {MatCardModule} from '@angular/material/card';
     MatChipsModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatDialogModule,
 
   ],
-  exports: [MatInputModule, MatFormFieldModule],
+  exports: [MatInputModule, MatFormFieldModule, ],
   providers: [],
   bootstrap: [AppComponent]
 })
