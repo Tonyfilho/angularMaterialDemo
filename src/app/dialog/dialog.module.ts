@@ -1,3 +1,4 @@
+import { DialogService } from './dialog.service';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
@@ -35,5 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
   ],
   exports: [DialogComponent],
+  providers:[DialogService,]
+  //  { provide: DIALOG_DATA, useValue:{}}
 })
 export class DialogModule {}

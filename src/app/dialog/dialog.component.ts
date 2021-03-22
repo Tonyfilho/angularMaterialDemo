@@ -14,7 +14,7 @@ export class DialogComponent implements OnInit {
 
   showtheDialog() {
     const dialog = this.dialog
-      .open(DialogSonComponent)
+      .open(DialogSonComponent, { data:{ couserId: 1 }})
       .afterClosed()
       .subscribe((result) =>
         console.log('nosso retorno do Button no component Dialog-son: ' + result)
